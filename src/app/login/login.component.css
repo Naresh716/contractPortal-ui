@@ -1,0 +1,17 @@
+html,
+body {
+  height: 100%;
+    overflow: hidden !important;
+}
+
+.main{
+    max-height: -webkit-fill-available !important;
+    text-align: -webkit-center !important;
+      margin-top: 150px !important;    
+}
+/* .mat-form-field-infix {
+    width: 290px !important;
+} */
+.spacer{
+    flex: 1 1 auto;
+}

@@ -1,0 +1,37 @@
+.sidenav-container {
+  height: 100%;
+}
+
+.sidenav {
+  width: 200px;
+}
+mat-sidenav{
+  background-color: rgb(218, 210, 238);
+}
+mat-list-item{
+  border-color:rgb(184, 192, 199) ;
+}
+.sidenav .mat-toolbar {
+  background: inherit;
+}
+
+.mat-toolbar.mat-primary {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+.spacer{
+  flex: auto;
+}
+.material-icons.md-36{
+  font-size: 36px;
+}
+.cursor{
+  cursor: pointer;
+}
+.mat-sidenav{
+  background-color: #2a3a4a;
+}
+.mat-list-item{
+  color: aliceblue;
+}

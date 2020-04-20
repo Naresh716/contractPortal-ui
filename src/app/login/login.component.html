@@ -1,0 +1,48 @@
+
+<mat-toolbar style="background-color: #485c72; color:aliceblue">
+  <h3>Contract <span style="color: #3fbcf4;;">Portal</span></h3>
+  <div class="spacer"></div>
+  <h4>Terms of Service &nbsp;</h4>
+  <h4>| &nbsp; </h4>
+  <h4>Privacy Policy &nbsp; &nbsp;</h4>
+</mat-toolbar>
+<!-- <mat-toolbar color="primary">
+  <span class="gap">File</span>
+  <span>Edit</span>
+  <span class="filler"></span>
+  <span>About</span>
+</mat-toolbar> -->
+<div class="h-100 align-items-center main">
+  <div class="login-card card-block auth-body mr-auto ml-auto">
+    <form [formGroup]="form">
+      <mat-card style="max-width: 330px;text-align: center;">
+        <div class="text-center">
+          <h4>Welcome Back</h4>
+        </div>
+        <mat-card-content>
+          <mat-form-field style="width: 290px; text-align:center;">
+            <input matInput formControlName="userName"
+              placeholder="User/Email">
+            <mat-error>Incorret Username</mat-error>
+          </mat-form-field>
+          <mat-form-field style="width: 290px;text-align: center;">
+            <input matInput formControlName="password" placeholder="Password"
+              type="password">
+            <mat-error>Incorret Password
+            </mat-error>
+          </mat-form-field>
+          <div class="row">
+          </div>
+        </mat-card-content>
+        <mat-card-actions style="display: inline-grid">
+          <button mat-raised-button style="background-color: #3fbcf4;;"
+            [disabled]="form.invalid"
+            (click)="submit(form)">Login</button>
+          <p>
+            Don't have an account?<a routerLink="/register" href="">Sign Up</a>
+          </p>
+        </mat-card-actions>
+      </mat-card>
+    </form>
+  </div>
+</div>

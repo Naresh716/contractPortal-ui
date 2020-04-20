@@ -1,0 +1,47 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav class="push"
+    mode="side" opened autoFocus=true>
+    <mat-toolbar style="background-color: #2a3a4a;color: aliceblue;"><span><mat-icon>menu</mat-icon></span></mat-toolbar>
+    <mat-nav-list style="background-color: #2a3a4a;color: aliceblue;">
+      <a mat-list-item href="#"><mat-icon>home</mat-icon></a>
+      <a mat-list-item href="#"><mat-icon>search</mat-icon></a>
+      <a mat-list-item href="#"><mat-icon>account_circle</mat-icon></a>
+      <a mat-list-item href="#"><mat-icon>work</mat-icon></a>
+      <a mat-list-item href="#"><mat-icon>calendar_today</mat-icon></a>
+      <a mat-list-item href="#"><mat-icon>insert_drive_file</mat-icon></a>
+      <a mat-list-item href="#"><mat-icon>message</mat-icon></a>
+      <a mat-list-item href="#"><mat-icon>build</mat-icon></a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar style="background-color: #485c72; color:aliceblue">
+      <!-- <button
+        type="button"
+        aria-label="Toggle sidenav"
+        mat-icon-button
+        (click)="drawer.toggle()"
+        *ngIf="isHandset$ | async">
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button> -->
+      <span><b>Contract </b> <b style="color: #3fbcf4;">Portal</b></span>
+      <div class="spacer"></div>
+
+      <mat-icon style="padding-right:25px;margin-top: -10px;"
+        class="material-icons md-36 cursor">notifications</mat-icon>
+      <div style="display: flex;" class="cursor" [matMenuTriggerFor]="menu">
+        <mat-icon style="padding-right: 20px;"
+          class="material-icons md-36">account_circle</mat-icon>
+        <h1>Username</h1>
+
+      </div>
+
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item>User Preferences</button>
+        <button mat-menu-item>Account Settings</button>
+        <button mat-menu-item (click)="logout()">Logout</button>
+      </mat-menu>
+    </mat-toolbar>
+    <!-- Add Content Here -->
+
+  </mat-sidenav-content>
+</mat-sidenav-container>
