@@ -2,98 +2,129 @@
   <h2><b>Create User</b></h2>
   <form [formGroup]="form" class="normal-form">
     <div layout="row">
-      <div class="col-md-6">Username</div>
+      <div class="col-md-6"></div>
       <div class="col-md-6">
-        <input type="text" formControlName="userName" matInput>
-
+        <mat-form-field>
+          <input type="text" formControlName="userName" matInput
+            placeholder="Username">
+        </mat-form-field>
       </div>
     </div>
     <div layout="row">
-      <div class="col-md-6">Email</div>
+      <div class="col-md-6"></div>
       <div class="col-md-6">
-        <input type="text" formControlName="email" matInput>
+        <mat-form-field>
+          <input type="text" formControlName="email" matInput
+            placeholder="Email">
 
+        </mat-form-field>
       </div>
     </div>
     <div layout="row">
-      <div class="col-md-6">Password</div>
+      <div class="col-md-6"></div>
       <div class="col-md-6">
-        <input type="password" formControlName="password" matInput>
+        <mat-form-field>
+          <input type="password" formControlName="password" matInput
+            placeholder="Password">
 
+        </mat-form-field>
       </div>
     </div>
     <div layout="row">
-      <div class="col-md-6">Confirm Password</div>
+      <div class="col-md-6"></div>
       <div class="col-md-6">
-        <input type="password" formControlName="confirmPassword" matInput>
+        <mat-form-field>
+          <input type="password" formControlName="confirmPassword" matInput
+            placeholder="Confirm Password">
+        </mat-form-field>
       </div>
     </div>
     <div layout="row">
-      <div class="col-md-6">Display Name</div>
+      <div class="col-md-6"></div>
       <div class="col-md-6">
-        <input type="text" formControlName="displayName" matInput>
-
+        <mat-form-field> <input type="text" formControlName="displayName"
+            matInput placeholder="Display Name">
+        </mat-form-field>
       </div>
     </div>
     <div layout="row">
-      <div class="col-md-6">Firstname</div>
+      <div class="col-md-6"></div>
       <div class="col-md-6">
-        <input type="text" formControlName="firstName" matInput
-          placeholder="firstName">
+        <mat-form-field>
+          <input type="text" formControlName="firstName" matInput
+            placeholder="firstName">
 
+        </mat-form-field>
       </div>
     </div>
     <div layout="row">
-      <div class="col-md-6">Lastname</div>
+      <div class="col-md-6"></div>
       <div class="col-md-6">
-        <input type="text" formControlName="lastName" matInput
-          placeholder="Lastname">
-
+        <mat-form-field><input type="text" formControlName="lastName" matInput
+            placeholder="Lastname">
+        </mat-form-field>
       </div>
     </div>
     <div layout="row">
-      <div class="col-md-6">Nickname</div>
+      <div class="col-md-6"></div>
       <div class="col-md-6">
-        <input type="text" formControlName="nickName" matInput>
-
+        <mat-form-field> <input type="text" formControlName="nickName" matInput
+            placeholder="Nickname">
+        </mat-form-field>
       </div>
     </div>
     <div layout="row">
-      <div class="col-md-6">Website</div>
+      <div class="col-md-6"></div>
       <div class="col-md-6">
-        <input type="text" formControlName="website" matInput>
+        <mat-form-field>
+          <input type="text" formControlName="website" matInput
+            placeholder="Website">
 
+        </mat-form-field>
       </div>
     </div>
     <div layout="row">
-      <div class="col-md-6">Bio</div>
+      <div class="col-md-6"></div>
       <div class="col-md-6">
-        <textarea type="text" formControlName="bio" matInput></textarea>
+        <mat-form-field>
+          <textarea type="text" formControlName="bio" matInput
+            placeholder="Bio"></textarea>
 
+        </mat-form-field>
       </div>
     </div>
     <div layout="row">
-      <div class="col-md-6">Jabber</div>
+      <div class="col-md-6"></div>
       <div class="col-md-6">
-        <input type="text" formControlName="jabber" matInput>
+        <mat-form-field>
+          <input type="text" formControlName="jabber" matInput
+            placeholder="Jabber">
 
+        </mat-form-field>
       </div>
     </div>
     <div layout="row">
-      <div class="col-md-6">AOL_IM</div>
+      <div class="col-md-6"></div>
       <div class="col-md-6">
-        <input type="text" formControlName="aol_im" matInput>
+        <mat-form-field>
+          <input type="text" formControlName="aol_im" matInput
+            placeholder="AOL_IM">
 
+        </mat-form-field>
       </div>
     </div>
     <div layout="row">
-      <div class="col-md-6">YAHOO_IM</div>
+      <div class="col-md-6"></div>
       <div class="col-md-6">
-        <input type="text" formControlName="yahoo_im" matInput>
+        <mat-form-field>
+          <input type="text" formControlName="yahoo_im" matInput
+            placeholder="YAHOO_IM">
+        </mat-form-field>
       </div>
     </div>
 
-    <button mat-raised-button color="primary"
+    <button mat-raised-button style="background-color: #3fbcf4; color:
+      aliceblue;"
       [disabled]="form.invalid"
       (click)="submit(form)">Create and
       Access</button>

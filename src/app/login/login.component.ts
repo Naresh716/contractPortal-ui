@@ -29,7 +29,7 @@ export class LoginComponent implements OnInit {
     this.http.post(pathUrl + 'api/auth/authenticate', user)
       .subscribe((data) => {
         this.commonService.setUser(data['token']);
-        this.router.navigate(['/main']);
+        this.router.navigate(['/dashboard']);
       },
         error => {
           this.snackbar.open(error.error.message);
