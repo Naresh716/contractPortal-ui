@@ -3,6 +3,7 @@ import { FormGroup, FormControl, Validators, Validator } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
 import { pathUrl } from 'src/environments/environment';
 import { MatSnackBar } from '@angular/material';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-register',
@@ -11,7 +12,7 @@ import { MatSnackBar } from '@angular/material';
 })
 export class RegisterComponent implements OnInit {
 
-  constructor(private http: HttpClient, private sanckbar: MatSnackBar) { }
+  constructor(private http: HttpClient, private sanckbar: MatSnackBar, private router: Router) { }
 
   form: FormGroup = new FormGroup({
     userName: new FormControl('', [Validators.required, Validators.maxLength(50), Validators.minLength(1)]),
@@ -51,16 +52,15 @@ export class RegisterComponent implements OnInit {
     if (reqObj.password == reqObj.confirmPassword) {
       this.http.post(pathUrl + 'api/user/register', reqObj)
         .subscribe((data) => {
-          console.log(data);
+          this.router.navigate(['/login']);
         },
           error => {
-            this.sanckbar.open(error.error.messsage,'Error',{duration:5000})
+            this.sanckbar.open(error.error.messsage, 'Error', { duration: 5000 })
           }
         );
     } else {
       this.sanckbar.open("Password and Confirm Password must be same", 'Error', { duration: 5000 });
     }
-    console.log(form.controls);
   }
   ngOnInit() {
   }
